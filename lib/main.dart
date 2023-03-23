@@ -63,17 +63,21 @@ class MyHomePage extends StatelessWidget {
                     radius: 50,
                     backgroundImage: NetworkImage(provider.user.avatar),
                   ),
-                  const SizedBox(height: 10),
+                  const SizedBox(height: 16),
                   Text(
                     '${user.firstName} ${user.lastName}',
                     style: const TextStyle(fontSize: 20),
                   ),
+                  const SizedBox(height: 8),
                   Text(
                     user.email,
                     style: const TextStyle(color: Colors.grey),
                   ),
+                  const SizedBox(height: 8),
                   Text(user.phoneNumber),
+                  const SizedBox(height: 4),
                   Text(DateFormat("dd, MMMM y").format(user.dateOfBirth)),
+                  const SizedBox(height: 16),
                   ElevatedButton(
                     onPressed: () {
                       Provider.of<ApiProvider>(context, listen: false)
